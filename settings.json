@@ -1,4 +1,4 @@
 {
-  "gifDir": "../gifs/",
+  "gifDir": "gifs/",
   "gifs": ["catbegging", "gddy", "loirielanyyh", "whatislove"]
 }
