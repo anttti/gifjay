@@ -1,9 +1,5 @@
 var Preloader = require('./preloader');
-
-// Directory where gifs live, relative to this file
-var GIF_DIR = 'gifs/';
-// Names of the gifs, without file extension
-var GIFS = ['catbegging', 'gddy', 'loirielanyyh', 'whatislove'];
+var Settings = require('../settings.json');
 
 var hideLoadingImage = function(gifs) {
   var loadingIndicator = document.getElementById('loading-indicator');
@@ -37,7 +33,7 @@ var setupListenersAndShowFirst = function(gifs) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  Preloader.preloadImages(GIFS, GIF_DIR)
+  Preloader.preloadImages(Settings.gifs, Settings.gifDir)
     .then(hideLoadingImage)
     .then(appendGifsToDom)
     .then(setupListenersAndShowFirst)

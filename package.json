@@ -12,5 +12,10 @@
     "bluebird": "~2.3.2"
   },
   "devDependencies": {
+  },
+  "scripts": {
+    "watch": "mkdir -p build && watchify src/gifjay.js -o build/bundle.js",
+    "build": "mkdir -p build && browserify src/gifjay.js -o build/bundle.js",
+    "clean": "rm -rf build/"
   }
 }
